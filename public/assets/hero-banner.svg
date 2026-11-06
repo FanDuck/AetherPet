@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%">
+  <defs>
+    <!-- Deep Sea Nebula Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="42%" r="70%" fx="50%" fy="35%">
+      <stop offset="0%" stop-color="#152b59" />
+      <stop offset="55%" stop-color="#0a1329" />
+      <stop offset="100%" stop-color="#050812" />
+    </radialGradient>
+
+    <!-- Cyan / Pink Glow Filters -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="38" />
+    </filter>
+
+    <!-- Chubby Whale 3D Body Gradient -->
+    <radialGradient id="whaleBody" cx="38%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#8ec5ff" />
+      <stop offset="45%" stop-color="#5b8ef4" />
+      <stop offset="100%" stop-color="#2b4c9b" />
+    </radialGradient>
+
+    <radialGradient id="whaleBelly" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#dbeafe" />
+    </radialGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#72efdd" />
+      <stop offset="50%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.72" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.52" />
+    </linearGradient>
+
+    <style>
+      @keyframes floatWhale {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-14px) rotate(1.5deg); }
+      }
+      @keyframes wagTail {
+        0%, 100% { transform: rotate(-6deg); }
+        50% { transform: rotate(8deg); }
+      }
+      @keyframes bounceAhoge {
+        0%, 100% { transform: rotate(-8deg); }
+        50% { transform: rotate(12deg); }
+      }
+      @keyframes riseBubble1 {
+        0% { transform: translateY(0px) scale(0.8); opacity: 0.85; }
+        100% { transform: translateY(-110px) scale(1.25); opacity: 0.1; }
+      }
+      @keyframes pulseRing {
+        0%, 100% { transform: scale(1); opacity: 0.55; }
+        50% { transform: scale(1.08); opacity: 0.9; }
+      }
+      @keyframes spinCube {
+        0%, 100% { transform: translateY(0px) rotate(-8deg); }
+        50% { transform: translateY(-10px) rotate(10deg); }
+      }
+      .whale-group { animation: floatWhale 4.2s ease-in-out infinite; transform-origin: 860px 280px; }
+      .tail-group { animation: wagTail 2.2s ease-in-out infinite; transform-origin: 960px 330px; }
+      .ahoge-group { animation: bounceAhoge 2.6s ease-in-out infinite; transform-origin: 850px 145px; }
+      .bubble-1 { animation: riseBubble1 3.6s ease-in-out infinite; }
+      .bubble-2 { animation: riseBubble1 4.4s ease-in-out infinite 1.2s; }
+      .bubble-3 { animation: riseBubble1 3.9s ease-in-out infinite 2.1s; }
+      .ring-pulse { animation: pulseRing 3s ease-in-out infinite; transform-origin: 855px 425px; }
+      .cube-float { animation: spinCube 3.2s ease-in-out infinite; transform-origin: 705px 315px; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- Main Rounded Banner Canvas -->
+  <rect width="1200" height="540" rx="28" fill="url(#bgGrad)" />
+  <rect x="2" y="2" width="1196" height="536" rx="26" fill="none" stroke="#38bdf8" stroke-opacity="0.22" stroke-width="2" />
+
+  <!-- Ambient Nebula Orbs -->
+  <circle cx="850" cy="260" r="210" fill="#38bdf8" opacity="0.18" filter="url(#softGlow)" />
+  <circle cx="280" cy="160" r="160" fill="#8b5cf6" opacity="0.15" filter="url(#softGlow)" />
+  <circle cx="960" cy="390" r="140" fill="#f472b6" opacity="0.14" filter="url(#softGlow)" />
+
+  <!-- Decorative Grid Lines -->
+  <g stroke="#38bdf8" stroke-opacity="0.06" stroke-width="1">
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="260" x2="1200" y2="260" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="240" y1="0" x2="240" y2="540" />
+    <line x1="560" y1="0" x2="560" y2="540" />
+    <line x1="880" y1="0" x2="880" y2="540" />
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- LEFT COLUMN: BRANDING, TITLE & FEATURE PILLS              -->
+  <!-- ========================================================= -->
+  <g class="font-sans" transform="translate(64, 68)">
+    <!-- Top Status Pill -->
+    <rect x="0" y="0" width="350" height="34" rx="17" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.45" />
+    <circle cx="20" cy="17" r="5" fill="#10b981" />
+    <text x="34" y="22" fill="#bae6fd" font-size="13" font-weight="600">
+      OPEN-SOURCE 3D AI COMPANION · v0.01
+    </text>
+
+    <!-- Main Hero Title -->
+    <text x="0" y="96" fill="url(#titleGrad)" font-size="56" font-weight="800" letter-spacing="-0.5">
+      AetherPet 🐾 大肥鱼
+    </text>
+    <text x="0" y="140" fill="#f1f5f9" font-size="22" font-weight="600">
+      前后端一体 · 可说话 · 3D「大肥鱼」AI 桌面灵宠框架
+    </text>
+    <text x="0" y="176" fill="#94a3b8" font-size="15">
+      DeepSeek / OpenAI / Ollama 多模型流式驱动 · 多源 TTS 实时口型同步 · Three.js 物理交互
+    </text>
+
+    <!-- 4 Glassmorphism Feature Cards -->
+    <g transform="translate(0, 210)">
+      <!-- Card 1 -->
+      <rect x="0" y="0" width="265" height="78" rx="16" fill="url(#cardBg)" stroke="#38bdf8" stroke-opacity="0.3" />
+      <text x="20" y="30" fill="#38bdf8" font-size="15" font-weight="700">🧠 全生态大模型热插拔</text>
+      <text x="20" y="54" fill="#cbd5e1" font-size="12.5">DeepSeek · OpenAI · 硅基流动 · Ollama</text>
+
+      <!-- Card 2 -->
+      <rect x="282" y="0" width="265" height="78" rx="16" fill="url(#cardBg)" stroke="#f472b6" stroke-opacity="0.3" />
+      <text x="302" y="30" fill="#f472b6" font-size="15" font-weight="700">🎙️ 多源配音 + 实时口型同步</text>
+      <text x="302" y="54" fill="#cbd5e1" font-size="12.5">Edge免Key · CosyVoice2 · Fish · ElevenLabs</text>
+
+      <!-- Card 3 -->
+      <rect x="0" y="94" width="265" height="78" rx="16" fill="url(#cardBg)" stroke="#a78bfa" stroke-opacity="0.3" />
+      <text x="20" y="124" fill="#a78bfa" font-size="15" font-weight="700">🐳 大肥鱼灵魂手势交互</text>
+      <text x="20" y="148" fill="#cbd5e1" font-size="12.5">左键拎起晃悠 · 吐泡泡 · 还原魔方 · 喂鱼干</text>
+
+      <!-- Card 4 -->
+      <rect x="282" y="94" width="265" height="78" rx="16" fill="url(#cardBg)" stroke="#34d399" stroke-opacity="0.3" />
+      <text x="302" y="124" fill="#34d399" font-size="15" font-weight="700">✨ 四大形态 + VRM 导入</text>
+      <text x="302" y="148" fill="#cbd5e1" font-size="12.5">大肥鱼 / 糯米团 / 灵狐 / 喵灵 + .vrm</text>
+    </g>
+
+    <!-- Bottom Terminal Quick Command -->
+    <g transform="translate(0, 405)">
+      <rect x="0" y="0" width="547" height="44" rx="12" fill="#090d16" stroke="#334155" />
+      <circle cx="20" cy="22" r="5" fill="#ef4444" />
+      <circle cx="36" cy="22" r="5" fill="#f59e0b" />
+      <circle cx="52" cy="22" r="5" fill="#10b981" />
+      <text x="76" y="27" class="font-mono" fill="#38bdf8" font-size="13.5">
+        $ git clone https://github.com/FanDuck/AetherPet.git &amp;&amp; npm run dev
+      </text>
+    </g>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- RIGHT COLUMN: 3D CHUBBY WHALE (大肥鱼) STAGE ILLUSTRATION -->
+  <!-- ========================================================= -->
+
+  <!-- Holographic Stage Pedestal & Sound Wave Rings -->
+  <g class="ring-pulse">
+    <ellipse cx="855" cy="432" rx="170" ry="36" fill="#0d1b3a" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.6" />
+    <ellipse cx="855" cy="428" rx="135" ry="26" fill="none" stroke="#72efdd" stroke-width="2.5" stroke-dasharray="12 8" />
+    <ellipse cx="855" cy="428" rx="95" ry="18" fill="#38bdf8" fill-opacity="0.2" />
+  </g>
+
+  <!-- Animated 3D ChubbyWhale Character -->
+  <g class="whale-group">
+    <!-- Plump Whale Tail & Flukes Behind Body -->
+    <g class="tail-group">
+      <path d="M 940 320 Q 1020 310 1045 260 Q 1075 230 1095 255 Q 1080 300 1045 315 Q 1085 335 1090 365 Q 1055 380 1025 345 Q 980 360 935 345 Z" fill="url(#whaleBody)" stroke="#7dd3fc" stroke-width="1.5" />
+    </g>
+
+    <!-- Left & Right Ear Fins -->
+    <ellipse cx="725" cy="215" rx="34" ry="18" transform="rotate(-28 725 215)" fill="url(#whaleBody)" />
+    <ellipse cx="985" cy="215" rx="34" ry="18" transform="rotate(28 985 215)" fill="url(#whaleBody)" />
+
+    <!-- Main Chubby Jelly Sphere Body -->
+    <ellipse cx="855" cy="285" rx="132" ry="118" fill="url(#whaleBody)" filter="url(#glow)" opacity="0.25" />
+    <ellipse cx="855" cy="285" rx="132" ry="118" fill="url(#whaleBody)" stroke="#bae6fd" stroke-width="2" stroke-opacity="0.5" />
+
+    <!-- Specular 3D Highlight on Upper Left -->
+    <ellipse cx="795" cy="215" rx="48" ry="24" transform="rotate(-22 795 215)" fill="#ffffff" fill-opacity="0.32" />
+
+    <!-- Soft White Whale Belly -->
+    <ellipse cx="855" cy="318" rx="92" ry="74" fill="url(#whaleBelly)" />
+
+    <!-- Frilly White Maid Headband -->
+    <path d="M 760 185 Q 855 142 950 185" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+    <path d="M 768 183 Q 855 146 942 183" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6 6" />
+
+    <!-- Signature Bouncing Ahoge (头顶呆毛) -->
+    <g class="ahoge-group">
+      <path d="M 855 162 Q 865 105 905 112 Q 880 130 868 164 Z" fill="#60a5fa" stroke="#bae6fd" stroke-width="1.5" />
+      <circle cx="908" cy="110" r="8" fill="#72efdd" filter="url(#glow)" />
+    </g>
+
+    <!-- Tsundere Expressive Eyebrows -->
+    <line x1="785" y1="232" x2="822" y2="242" stroke="#0c1938" stroke-width="5.5" stroke-linecap="round" />
+    <line x1="925" y1="232" x2="888" y2="242" stroke="#0c1938" stroke-width="5.5" stroke-linecap="round" />
+
+    <!-- Left Anime Eye -->
+    <g transform="translate(804, 265)">
+      <circle cx="0" cy="0" r="19" fill="#0c1938" />
+      <circle cx="-6" cy="-6" r="6.5" fill="#ffffff" />
+      <circle cx="7" cy="5" r="3" fill="#ffffff" />
+      <circle cx="0" cy="8" r="4" fill="#38bdf8" fill-opacity="0.6" />
+    </g>
+
+    <!-- Right Anime Eye -->
+    <g transform="translate(906, 265)">
+      <circle cx="0" cy="0" r="19" fill="#0c1938" />
+      <circle cx="-6" cy="-6" r="6.5" fill="#ffffff" />
+      <circle cx="7" cy="5" r="3" fill="#ffffff" />
+      <circle cx="0" cy="8" r="4" fill="#38bdf8" fill-opacity="0.6" />
+    </g>
+
+    <!-- Glowing Blush Cheeks -->
+    <ellipse cx="768" cy="285" rx="18" ry="10" fill="#ff7aa2" fill-opacity="0.78" />
+    <ellipse cx="942" cy="285" rx="18" ry="10" fill="#ff7aa2" fill-opacity="0.78" />
+
+    <!-- Cute Speaking / Bubble Mouth -->
+    <ellipse cx="855" cy="286" rx="14" ry="11" fill="#e63976" stroke="#fda4af" stroke-width="1.5" />
+
+    <!-- Maid Pink Bowtie on Chest -->
+    <g transform="translate(855, 345)">
+      <polygon points="-28,-14 0,0 -28,14" fill="#ff5c8a" />
+      <polygon points="28,-14 0,0 28,14" fill="#ff5c8a" />
+      <circle cx="0" cy="0" r="8" fill="#ffd166" />
+    </g>
+
+    <!-- Cute Side Flippers -->
+    <ellipse cx="722" cy="305" rx="18" ry="34" transform="rotate(28 722 305)" fill="url(#whaleBody)" />
+    <ellipse cx="988" cy="295" rx="18" ry="34" transform="rotate(-38 988 295)" fill="url(#whaleBody)" />
+
+    <!-- Chubby Feet -->
+    <ellipse cx="805" cy="398" rx="24" ry="14" fill="#3b6fd8" />
+    <ellipse cx="905" cy="398" rx="24" ry="14" fill="#3b6fd8" />
+  </g>
+
+  <!-- Floating 3D Holographic Rubik's Cube Prop -->
+  <g class="cube-float">
+    <rect x="682" y="292" width="46" height="46" rx="8" fill="#0284c7" fill-opacity="0.85" stroke="#7dd3fc" stroke-width="2" />
+    <line x1="697" y1="292" x2="697" y2="338" stroke="#e0f2fe" stroke-width="1.5" />
+    <line x1="713" y1="292" x2="713" y2="338" stroke="#e0f2fe" stroke-width="1.5" />
+    <line x1="682" y1="307" x2="728" y2="307" stroke="#e0f2fe" stroke-width="1.5" />
+    <line x1="682" y1="323" x2="728" y2="323" stroke="#e0f2fe" stroke-width="1.5" />
+  </g>
+
+  <!-- Rising Iridescent Deep-Sea Bubbles -->
+  <g class="bubble-1">
+    <circle cx="755" cy="220" r="16" fill="#72efdd" fill-opacity="0.25" stroke="#a5f3fc" stroke-width="1.5" />
+    <circle cx="750" cy="215" r="4" fill="#ffffff" fill-opacity="0.8" />
+  </g>
+  <g class="bubble-2">
+    <circle cx="965" cy="195" r="22" fill="#f472b6" fill-opacity="0.22" stroke="#fbcfe8" stroke-width="1.5" />
+    <circle cx="958" cy="188" r="5" fill="#ffffff" fill-opacity="0.8" />
+  </g>
+  <g class="bubble-3">
+    <circle cx="790" cy="145" r="12" fill="#60a5fa" fill-opacity="0.28" stroke="#bae6fd" stroke-width="1.5" />
+    <circle cx="787" cy="142" r="3" fill="#ffffff" fill-opacity="0.8" />
+  </g>
+
+  <!-- Floating Speech Bubble Callout Above ChubbyWhale -->
+  <g class="font-sans" transform="translate(650, 44)">
+    <rect x="0" y="0" width="470" height="54" rx="20" fill="#091326" fill-opacity="0.9" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.5" />
+    <text x="22" y="32" fill="#f8fafc" font-size="14" font-weight="600">
+      😤 “哼！再拿鼠标拎本肥鱼晃悠，我就吐泡泡淹没你的屏幕！”
+    </text>
+  </g>
+
+  <!-- Floating Telemetry Badge -->
+  <g class="font-mono" transform="translate(965, 455)">
+    <rect x="0" y="0" width="185" height="36" rx="12" fill="#091326" fill-opacity="0.85" stroke="#38bdf8" stroke-opacity="0.35" />
+    <circle cx="18" cy="18" r="4" fill="#38bdf8" />
+    <text x="30" y="22" fill="#7dd3fc" font-size="11.5">CPU 14% | LIP-SYNC</text>
+  </g>
+</svg>

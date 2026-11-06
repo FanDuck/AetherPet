@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 390" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#13203d" />
+      <stop offset="100%" stop-color="#090e1d" />
+    </linearGradient>
+
+    <!-- Whale Blue -->
+    <radialGradient id="spWhale" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </radialGradient>
+
+    <!-- Sakura Mochi Pink -->
+    <radialGradient id="spMochi" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#fbcfe8" />
+      <stop offset="50%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#be185d" />
+    </radialGradient>
+
+    <!-- CyberFox Cyan -->
+    <radialGradient id="spFox" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#a5f3fc" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0e7490" />
+    </radialGradient>
+
+    <!-- AstraCat Violet -->
+    <radialGradient id="spCat" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#e9d5ff" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6b21a8" />
+    </radialGradient>
+
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+      @keyframes bob1 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+      .b1 { animation: bob1 3.4s ease-in-out infinite; }
+      .b2 { animation: bob1 3.8s ease-in-out infinite 0.5s; }
+      .b3 { animation: bob1 3.2s ease-in-out infinite 1.0s; }
+      .b4 { animation: bob1 3.6s ease-in-out infinite 1.5s; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="390" rx="24" fill="#060913" />
+
+  <!-- CARD 1: CHUBBY WHALE (大肥鱼) -->
+  <g class="font-sans" transform="translate(24, 22)">
+    <rect width="272" height="346" rx="20" fill="url(#bgCard)" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1.5" />
+    <rect x="18" y="16" width="110" height="24" rx="12" fill="#0284c7" fill-opacity="0.3" stroke="#38bdf8" stroke-opacity="0.5" />
+    <text x="32" y="32" fill="#7dd3fc" font-size="11.5" font-weight="700">DEFAULT · 默认本命</text>
+
+    <g class="b1" transform="translate(136, 152)">
+      <!-- Tail -->
+      <path d="M 45 25 Q 85 15 95 -15 Q 108 -25 114 -10 Q 104 15 88 25 Q 108 40 105 55 Q 88 60 75 40 Z" fill="url(#spWhale)" />
+      <!-- Side Fins -->
+      <ellipse cx="-68" cy="-35" rx="20" ry="10" transform="rotate(-25 -68 -35)" fill="url(#spWhale)" />
+      <ellipse cx="68" cy="-35" rx="20" ry="10" transform="rotate(25 68 -35)" fill="url(#spWhale)" />
+      <!-- Body -->
+      <ellipse cx="0" cy="0" rx="68" ry="60" fill="url(#spWhale)" />
+      <ellipse cx="0" cy="16" rx="46" ry="38" fill="#eff6ff" />
+      <!-- Maid Band & Ahoge -->
+      <path d="M -45 -50 Q 0 -72 45 -50" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" />
+      <path d="M 0 -62 Q 8 -95 30 -88" fill="none" stroke="#60a5fa" stroke-width="5" stroke-linecap="round" />
+      <circle cx="32" cy="-88" r="5" fill="#72efdd" />
+      <!-- Eyes & Bowtie -->
+      <circle cx="-24" cy="-10" r="9.5" fill="#0c1938" />
+      <circle cx="-26" cy="-13" r="3" fill="#ffffff" />
+      <circle cx="24" cy="-10" r="9.5" fill="#0c1938" />
+      <circle cx="22" cy="-13" r="3" fill="#ffffff" />
+      <ellipse cx="-42" cy="2" rx="9" ry="5" fill="#ff7aa2" />
+      <ellipse cx="42" cy="2" rx="9" ry="5" fill="#ff7aa2" />
+      <ellipse cx="0" cy="2" rx="7" ry="5" fill="#e63976" />
+      <polygon points="-14,25 0,32 -14,39" fill="#ff5c8a" />
+      <polygon points="14,25 0,32 14,39" fill="#ff5c8a" />
+      <circle cx="0" cy="32" r="4" fill="#ffd166" />
+    </g>
+
+    <text x="22" y="266" fill="#f8fafc" font-size="18" font-weight="700">🐳 深海大肥鱼 · Whale</text>
+    <text x="22" y="292" fill="#94a3b8" font-size="12.5">头顶雷达呆毛 + 女仆领结 + 胖鲸鱼尾</text>
+    <text x="22" y="314" fill="#38bdf8" font-size="12">专属技能：吐七彩泡泡 / 三秒还原魔方</text>
+  </g>
+
+  <!-- CARD 2: SAKURA MOCHI (星光糯米团) -->
+  <g class="font-sans" transform="translate(318, 22)">
+    <rect width="272" height="346" rx="20" fill="url(#bgCard)" stroke="#f472b6" stroke-opacity="0.35" stroke-width="1.5" />
+    <rect x="18" y="16" width="95" height="24" rx="12" fill="#db2777" fill-opacity="0.25" stroke="#f472b6" stroke-opacity="0.45" />
+    <text x="30" y="32" fill="#fbcfe8" font-size="11.5" font-weight="700">MOCHI · 软萌</text>
+
+    <g class="b2" transform="translate(136, 155)">
+      <!-- Bunny Ears -->
+      <rect x="-46" y="-92" width="22" height="52" rx="11" transform="rotate(-15 -35 -65)" fill="url(#spMochi)" />
+      <rect x="24" y="-92" width="22" height="52" rx="11" transform="rotate(15 35 -65)" fill="url(#spMochi)" />
+      <ellipse cx="0" cy="0" rx="64" ry="58" fill="url(#spMochi)" />
+      <ellipse cx="0" cy="16" rx="42" ry="34" fill="#fff1f2" />
+      <circle cx="-24" cy="-8" r="9.5" fill="#2d1b36" />
+      <circle cx="-26" cy="-11" r="3" fill="#ffffff" />
+      <circle cx="24" cy="-8" r="9.5" fill="#2d1b36" />
+      <circle cx="22" cy="-11" r="3" fill="#ffffff" />
+      <ellipse cx="-42" cy="4" rx="10" ry="5" fill="#fb7185" />
+      <ellipse cx="42" cy="4" rx="10" ry="5" fill="#fb7185" />
+      <ellipse cx="0" cy="2" rx="6" ry="7" fill="#e11d48" />
+    </g>
+
+    <text x="22" y="266" fill="#f8fafc" font-size="18" font-weight="700">🍡 星光糯米团 · Mochi</text>
+    <text x="22" y="292" fill="#94a3b8" font-size="12.5">软糯垂耳团子 + 胡克定律果冻弹性</text>
+    <text x="22" y="314" fill="#f472b6" font-size="12">专属特性：极高 Q 弹回弹形变与爱心粒子</text>
+  </g>
+
+  <!-- CARD 3: CYBER FOX (霓虹灵狐) -->
+  <g class="font-sans" transform="translate(612, 22)">
+    <rect width="272" height="346" rx="20" fill="url(#bgCard)" stroke="#22d3ee" stroke-opacity="0.35" stroke-width="1.5" />
+    <rect x="18" y="16" width="105" height="24" rx="12" fill="#0891b2" fill-opacity="0.25" stroke="#22d3ee" stroke-opacity="0.45" />
+    <text x="30" y="32" fill="#a5f3fc" font-size="11.5" font-weight="700">CYBER · 赛博科技</text>
+
+    <g class="b3" transform="translate(136, 155)">
+      <!-- Sharp Cyber Fox Ears -->
+      <polygon points="-58,-38 -42,-98 -16,-52" fill="url(#spFox)" />
+      <polygon points="58,-38 42,-98 16,-52" fill="url(#spFox)" />
+      <ellipse cx="0" cy="0" rx="63" ry="58" fill="url(#spFox)" />
+      <ellipse cx="0" cy="16" rx="42" ry="34" fill="#ecfeff" />
+      <circle cx="-24" cy="-8" r="9.5" fill="#091526" />
+      <circle cx="-26" cy="-11" r="3" fill="#ffffff" />
+      <circle cx="24" cy="-8" r="9.5" fill="#091526" />
+      <circle cx="22" cy="-11" r="3" fill="#ffffff" />
+      <ellipse cx="0" cy="-68" rx="26" ry="6" fill="none" stroke="#00f5d4" stroke-width="3" />
+      <ellipse cx="0" cy="2" rx="7" ry="4" fill="#e11d48" />
+    </g>
+
+    <text x="22" y="266" fill="#f8fafc" font-size="18" font-weight="700">🦊 霓虹灵狐 · CyberFox</text>
+    <text x="22" y="292" fill="#94a3b8" font-size="12.5">赛博金属清漆光泽 + 悬浮能量光环</text>
+    <text x="22" y="314" fill="#22d3ee" font-size="12">专属特性：高金属反射率与霓虹尾焰</text>
+  </g>
+
+  <!-- CARD 4: ASTRA CAT / CUSTOM VRM (星际喵灵 & VRM) -->
+  <g class="font-sans" transform="translate(906, 22)">
+    <rect width="270" height="346" rx="20" fill="url(#bgCard)" stroke="#a855f7" stroke-opacity="0.35" stroke-width="1.5" />
+    <rect x="18" y="16" width="122" height="24" rx="12" fill="#7e22ce" fill-opacity="0.25" stroke="#a855f7" stroke-opacity="0.45" />
+    <text x="30" y="32" fill="#e9d5ff" font-size="11.5" font-weight="700">ASTRA + VRM 导入</text>
+
+    <g class="b4" transform="translate(135, 155)">
+      <!-- Cat Triangle Ears -->
+      <polygon points="-55,-32 -45,-84 -12,-48" fill="url(#spCat)" />
+      <polygon points="55,-32 45,-84 12,-48" fill="url(#spCat)" />
+      <ellipse cx="0" cy="0" rx="63" ry="58" fill="url(#spCat)" />
+      <ellipse cx="0" cy="16" rx="42" ry="34" fill="#faf5ff" />
+      <circle cx="-24" cy="-8" r="9.5" fill="#1f1135" />
+      <circle cx="-26" cy="-11" r="3" fill="#ffffff" />
+      <circle cx="24" cy="-8" r="9.5" fill="#1f1135" />
+      <circle cx="22" cy="-11" r="3" fill="#ffffff" />
+      <ellipse cx="0" cy="2" rx="8" ry="5" fill="#ec4899" />
+    </g>
+
+    <text x="22" y="266" fill="#f8fafc" font-size="18" font-weight="700">🐱 星际喵灵 &amp; VRM</text>
+    <text x="22" y="292" fill="#94a3b8" font-size="12.5">内置星瞳喵灵 + 支持导入 .vrm / .glb</text>
+    <text x="22" y="314" fill="#c084fc" font-size="12">专属特性：自动绑定 VRM aa 口型与视线</text>
+  </g>
+</svg>
