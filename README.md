@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./public/assets/hero-banner.svg" alt="AetherPet 大肥鱼 3D AI 桌面灵宠框架" width="100%" />
+<img src="./public/assets/hero-banner.png" alt="AetherPet 大肥鱼 3D AI 桌面灵宠框架" width="100%" />
 
 <br />
 
