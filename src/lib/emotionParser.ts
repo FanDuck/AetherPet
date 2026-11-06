@@ -9,6 +9,8 @@ const VALID_EMOTIONS: EmotionType[] = [
   'thinking',
   'sad',
   'love',
+  'tsundere',
+  'dizzy',
 ];
 
 const VALID_ACTIONS: ActionType[] = [
@@ -19,6 +21,12 @@ const VALID_ACTIONS: ActionType[] = [
   'nod',
   'dance',
   'shake',
+  'bubble',
+  'cube',
+  'eat',
+  'wander',
+  'dragged',
+  'sleep',
 ];
 
 /**
@@ -41,7 +49,6 @@ export function parsePetResponseTag(rawText: string): {
     return { cleanText, emotion, action };
   }
 
-  // 如果流式输出还在半截标签中（例如 "[EMOTION:hap"），暂时隐藏未闭合前缀
   if (/^\s*\[EMOTION[^\]]*$/i.test(rawText)) {
     return { cleanText: '' };
   }
@@ -50,7 +57,7 @@ export function parsePetResponseTag(rawText: string): {
 }
 
 /**
- * 清理文本以便送入 TTS 朗读（去除 Markdown 符号、括号动作描述及多余空白）
+ * 清理文本以便送入 TTS 朗读
  */
 export function cleanTextForTTS(text: string): string {
   return text

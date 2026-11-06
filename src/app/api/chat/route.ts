@@ -4,32 +4,38 @@ import { DEFAULT_SYSTEM_PROMPT } from '@/lib/presets';
 export const runtime = 'nodejs';
 
 /**
- * 当用户尚未配置任何大模型 API Key 且环境变量也为空时的智能灵宠交互模式，
- * 确保开源项目 git clone 后零配置也能立即体验完整的 3D 情绪、动作与语音闭环。
+ * 当用户尚未配置任何大模型 API Key 且环境变量也为空时的「大肥鱼」傲娇嘴硬智能模式，
+ * 确保开源项目 git clone 后零配置也能立即体验完整的 3D 肥鱼情绪、吐泡泡、玩魔方、喂小鱼干与语音闭环。
  */
 function buildSmartFallbackReply(userText: string, petName: string): string {
   const t = userText.toLowerCase();
 
+  if (t.includes('泡泡') || t.includes('bubble')) {
+    return `[EMOTION:tsundere|ACTION:bubble] 哼，看你这么无聊的份上，本肥鱼就勉为其难给你吐一串深海七彩大泡泡吧！咕噜噜噜~`;
+  }
+  if (t.includes('魔方') || t.includes('cube') || t.includes('聪明')) {
+    return `[EMOTION:excited|ACTION:cube] 瞧好了！三阶全息魔方本肥鱼闭着眼睛三秒就能还原，是不是超厉害？快拿小鱼干奖励我！`;
+  }
+  if (t.includes('鱼干') || t.includes('吃') || t.includes('饿') || t.includes('喂')) {
+    return `[EMOTION:happy|ACTION:eat] 嗷呜嗷呜！金黄酥脆的深海小鱼干太香啦，本肥鱼才不是贪吃呢，只是为了补充算力陪你写代码！`;
+  }
   if (t.includes('跳') || t.includes('舞') || t.includes('dance')) {
-    return `[EMOTION:excited|ACTION:dance] 好耶！音乐响起来，看我给你跳支元气满满的星光律动舞！需要在右上角「引擎配置」填入 DeepSeek 或 OpenAI Key 解锁我的完整智慧大脑哦~`;
+    return `[EMOTION:excited|ACTION:dance] 音乐起！看我摇着圆滚滚的鲸鱼大尾巴给你来一段深海摇摆舞，不许笑我胖哦！`;
   }
   if (t.includes('转圈') || t.includes('转个圈') || t.includes('spin')) {
-    return `[EMOTION:happy|ACTION:spin] 呼啦啦~ 360度超级螺旋转身！是不是超丝滑呀？`;
+    return `[EMOTION:happy|ACTION:spin] 呼啦啦~ 360度深海肥鱼大回旋！头顶的呆毛都要转晕啦~`;
   }
   if (t.includes('喜欢你') || t.includes('爱你') || t.includes('可爱') || t.includes('摸摸')) {
-    return `[EMOTION:love|ACTION:jump] 呜哇~ 被主人夸奖好开心呀，我最喜欢陪伴在主人身边啦！`;
+    return `[EMOTION:tsundere|ACTION:jump] 哼、哼！突然夸本肥鱼干嘛啦，就算你摸摸我的呆毛，我也只会多陪你亿会儿而已哦！`;
   }
-  if (t.includes('难过') || t.includes('累') || t.includes('烦') || t.includes('不开心')) {
-    return `[EMOTION:sad|ACTION:nod] 抱抱主人，辛苦啦！不管今天遇到什么烦恼，我都会一直在这里陪着你、给你加油充电的！`;
-  }
-  if (t.includes('你是谁') || t.includes('名字') || t.includes('介绍')) {
-    return `[EMOTION:happy|ACTION:wave] 我是你的 3D AI 灵宠 ${petName}！我支持对接 DeepSeek、OpenAI、硅基流动、通义千问和本地 Ollama，还能实时口型同步说话哦！`;
+  if (t.includes('难过') || t.includes('累') || t.includes('烦') || t.includes('不开心') || t.includes('bug')) {
+    return `[EMOTION:love|ACTION:nod] 笨蛋主人辛苦啦，快歇一会儿！不管是讨厌的 Bug 还是烦恼，本大肥鱼都会甩着尾巴帮你统统拍飞的！`;
   }
   if (t.includes('困') || t.includes('睡') || t.includes('晚安')) {
-    return `[EMOTION:sleepy|ACTION:nod] 呼噜噜... 我也有点犯困啦，祝主人今晚做个甜甜的星河美梦哟~`;
+    return `[EMOTION:sleepy|ACTION:sleep] 呼噜噜... 本肥鱼也困得睁不开眼啦，吐个安眠泡泡陪你一起睡个好觉吧~`;
   }
 
-  return `[EMOTION:curious|ACTION:wave] 收到主人的话啦：「${userText.slice(0, 28)}」！我现在处于免 Key 离线灵宠体验模式，点击右上角「引擎配置」填入你的 DeepSeek 或 OpenAI API Key，就能开启无限自由对话啦！`;
+  return `[EMOTION:tsundere|ACTION:bubble] 哼哼，本肥鱼听到你说「${userText.slice(0, 26)}」啦！你可以直接用鼠标左键拎起我在屏幕上晃晃、右键呼出秘密菜单喂小鱼干，或者在右上角「引擎配置」填入 DeepSeek Key 解锁我的完全体毒舌傲娇大脑哦！`;
 }
 
 export async function POST(req: NextRequest) {
@@ -38,7 +44,7 @@ export async function POST(req: NextRequest) {
     const {
       messages = [],
       llmConfig = {},
-      petName = 'Aether',
+      petName = '大肥鱼',
     } = body;
 
     const apiKey = (llmConfig.apiKey || process.env.LLM_API_KEY || '').trim();
@@ -50,11 +56,13 @@ export async function POST(req: NextRequest) {
       .trim()
       .replace(/\/+$/, '');
     const model = (llmConfig.model || process.env.LLM_MODEL || 'deepseek-chat').trim();
-    const temperature = typeof llmConfig.temperature === 'number' ? llmConfig.temperature : 0.75;
+    const temperature = typeof llmConfig.temperature === 'number' ? llmConfig.temperature : 0.78;
     const systemPrompt = llmConfig.systemPrompt || DEFAULT_SYSTEM_PROMPT;
-    const isOllama = llmConfig.provider === 'ollama' || baseUrl.includes('localhost:11434') || baseUrl.includes('127.0.0.1:11434');
+    const isOllama =
+      llmConfig.provider === 'ollama' ||
+      baseUrl.includes('localhost:11434') ||
+      baseUrl.includes('127.0.0.1:11434');
 
-    // 若既非本地 Ollama 又未配置任何 API Key，则使用内置高表现力流式模拟回复，保证开箱即用
     if (!apiKey && !isOllama) {
       const lastUserMsg =
         [...messages].reverse().find((m: { role: string }) => m.role === 'user')?.content ||

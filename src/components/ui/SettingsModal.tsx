@@ -468,8 +468,13 @@ export default function SettingsModal() {
                 <label className="block text-xs font-semibold uppercase tracking-wider text-white/60 mb-2.5">
                   1. 内置程序化 3D 萌宠种族切换 (支持果冻物理形变 + 实时口型)
                 </label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {[
+                    {
+                      id: 'chubbywhale',
+                      title: '深海大肥鱼 · ChubbyWhale (默认推荐)',
+                      desc: '圆滚滚蓝白肚皮 + 头顶灵动呆毛 + 女仆领结 + 胖乎乎鲸鱼大尾鳍',
+                    },
                     {
                       id: 'mochi',
                       title: '星光糯米团 · Mochi',

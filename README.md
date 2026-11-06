@@ -25,9 +25,12 @@
    - **免 Key 开箱即用**：内置免费云端语音与浏览器原生 `Web Speech API` 双重免配置发音方案。
    - **专业配音 API 接入**：一键对接 **SiliconFlow (CosyVoice2 / FishSpeech)**、**OpenAI TTS (`nova`/`shimmer`)**、**Fish Audio (二次元角色声线)**、**ElevenLabs** 以及本地 **GPT-SoVITS / CosyVoice**。
    - **实时频谱口型同步**：基于 `AudioContext + AnalyserNode` 实时提取人声频段能量包络，驱动 3D 宠物张嘴幅度与脚下声波光环。
-3. 🎨 **高表现力 3D 交互引擎 (Three.js + React Three Fiber + VRM)**
-   - **内置 3 种程序化 3D 萌宠形态**：`星光糯米团 (Mochi)`、`霓虹灵狐 (CyberFox)`、`星际喵灵 (AstraCat)`，搭配 5 套星云舞台配色。
-   - **胡克定律果冻弹性物理**：点击摸头、戳脸颊、揉肚子均会触发真实的果冻挤压回弹 (Squash & Stretch) 与 3D 爆裂爱心/星光粒子。
+3. 🎨 **高表现力 3D「大肥鱼」交互引擎 (Three.js + React Three Fiber + VRM)**
+   - **默认内置「深海大肥鱼 (ChubbyWhale)」+ 3 款萌宠形态**：圆滚滚蓝白鲸鱼肚皮、头顶灵动呆毛 (Ahoge)、女仆发箍与蝴蝶结、胖乎乎双瓣鲸鱼大尾鳍，同时支持切换 `星光糯米团 (Mochi)`、`霓虹灵狐 (CyberFox)`、`星际喵灵 (AstraCat)` 与 6 套舞台配色。
+   - **大肥鱼同款全套灵魂交互**：
+     - **左键拎起拖拽 + 物理惯性摆动**：按住左键可将大肥鱼拎在半空中左右晃悠，身体与呆毛产生真实单摆惯性倾斜，小鱼鳍与大尾巴惊慌扑腾，松手后噗通Q弹落地。
+     - **右键秘密交互菜单 & 滚轮无级缩放**：右键点击宠物随时呼出「投喂深海小鱼干、咕噜吐七彩泡泡、光速还原三阶魔方、揉呆毛、打瞌睡吹鼻涕泡」快捷轮盘，滚轮自由缩放肥鱼体型。
+     - **桌面自主溜达与实时硬件监控 (`/api/system`)**：空闲时大肥鱼会自动在舞台上迈着八字步溜达、吐泡泡、转魔方，左上角实时监控本机 CPU 负载与内存占用。
    - **支持自定义 `.vrm` / `.glb` / `.gltf` 外部模型导入**：直接上传 VRoid 导出的 `.vrm` 虚拟形象，自动绑定 `aa` 口型同步与头部视线追踪。
 4. 🎭 **大模型情绪与 3D 动作协同协议 (`[EMOTION:xxx|ACTION:yyy]`)**
    - 大模型在回复时自动输出情绪（`happy` / `excited` / `curious` / `shy` / `sleepy` / `thinking` / `sad` / `love`）与 3D 动作指令（`jump` / `spin` / `wave` / `nod` / `dance` / `shake`），实现「边说边跳、害羞脸红、开心转圈」的生命感。

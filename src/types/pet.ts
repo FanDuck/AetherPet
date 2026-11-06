@@ -6,7 +6,9 @@ export type EmotionType =
   | 'sleepy'
   | 'thinking'
   | 'sad'
-  | 'love';
+  | 'love'
+  | 'tsundere'
+  | 'dizzy';
 
 export type ActionType =
   | 'idle'
@@ -15,9 +17,15 @@ export type ActionType =
   | 'wave'
   | 'nod'
   | 'dance'
-  | 'shake';
+  | 'shake'
+  | 'bubble'
+  | 'cube'
+  | 'eat'
+  | 'wander'
+  | 'dragged'
+  | 'sleep';
 
-export type PetSpecies = 'mochi' | 'cyberfox' | 'astracat' | 'custom_model';
+export type PetSpecies = 'chubbywhale' | 'mochi' | 'cyberfox' | 'astracat' | 'custom_model';
 
 export interface PetThemePreset {
   id: string;
@@ -79,6 +87,14 @@ export interface ChatMessage {
   timestamp: number;
 }
 
+export interface SystemMetrics {
+  cpuUsage: number;
+  memUsagePercent: number;
+  memUsedGB: number;
+  memTotalGB: number;
+  uptimeHours: number;
+}
+
 export interface PetStatus {
   name: string;
   species: PetSpecies;
@@ -87,13 +103,17 @@ export interface PetStatus {
   customModelType: 'vrm' | 'gltf' | null;
   emotion: EmotionType;
   action: ActionType;
-  energy: number;      // 0 - 100
-  affection: number;   // 0 - 100
-  mood: number;        // 0 - 100
+  energy: number;       // 0 - 100
+  affection: number;    // 0 - 100
+  mood: number;         // 0 - 100
+  satiety: number;      // 0 - 100 饱食度（大肥鱼喂食小鱼干）
   level: number;
   isSpeaking: boolean;
   isThinking: boolean;
   isListening: boolean;
-  mouthOpen: number;   // 0.0 - 1.0 real-time audio amplitude
+  isDragging: boolean;  // 鼠标左键拎起拖拽状态
+  autoRoam: boolean;    // 自主在屏幕边缘溜达/吐泡泡/玩魔方
+  petScale: number;     // 滚轮缩放大小 (0.65 ~ 1.45)
+  mouthOpen: number;    // 0.0 - 1.0 real-time audio amplitude
   speechBubble: string;
 }

@@ -14,7 +14,7 @@ export const LLM_PROVIDER_PRESETS: Record<
 > = {
   deepseek: {
     name: 'DeepSeek (深度求索)',
-    badge: '推荐 · 极高性价比',
+    badge: '大肥鱼本命 · 极高性价比',
     baseUrl: 'https://api.deepseek.com/v1',
     defaultModel: 'deepseek-chat',
     models: ['deepseek-chat', 'deepseek-reasoner'],
@@ -103,7 +103,7 @@ export const TTS_PROVIDER_PRESETS: Record<
     defaultModel: 'edge-neural',
     defaultVoice: 'zh-CN-XiaoyiNeural',
     voices: [
-      { id: 'zh-CN-XiaoyiNeural', label: '晓伊 (元气动漫少女 · 推荐)' },
+      { id: 'zh-CN-XiaoyiNeural', label: '晓伊 (傲娇元气少女 · 大肥鱼绝配)' },
       { id: 'zh-CN-XiaoxiaoNeural', label: '晓晓 (温柔甜美伴侣)' },
       { id: 'zh-CN-YunxiNeural', label: '云希 (阳光少年音)' },
       { id: 'zh-CN-YunxiaNeural', label: '云夏 (可爱正太/萌宠音)' },
@@ -111,7 +111,7 @@ export const TTS_PROVIDER_PRESETS: Record<
       { id: 'ja-JP-NanamiNeural', label: '七海 Nanami (日系元气少女)' },
       { id: 'en-US-AnaNeural', label: 'Ana (英语呆萌萝莉音)' },
     ],
-    description: '服务端直连微软 Edge Neural 语音合成，无需任何 API Key 即可输出自然高甜度配音并驱动 3D 口型同步。',
+    description: '服务端直连免费神经语音合成，无需任何 API Key 即可输出自然高甜度配音并驱动 3D 口型同步。',
   },
   browser: {
     name: 'Web Speech 原生语音 (免Key)',
@@ -125,7 +125,7 @@ export const TTS_PROVIDER_PRESETS: Record<
       { id: 'ja-JP', label: '系统日语声线' },
       { id: 'en-US', label: '系统英语声线' },
     ],
-    description: '直接调用操作系统与浏览器内置语音合成引擎，100% 免配置、零网络开销，内置伪包络口型驱动。',
+    description: '直接调用操作系统与浏览器内置语音合成引擎，100% 免配置、零网络开销，内置拟真声波包络口型驱动。',
   },
   siliconflow: {
     name: 'SiliconFlow (CosyVoice2 / FishSpeech)',
@@ -160,7 +160,7 @@ export const TTS_PROVIDER_PRESETS: Record<
   },
   fishaudio: {
     name: 'Fish Audio (次元声优社区)',
-    badge: '二次元/萌宠角色音',
+    badge: '二次元/大肥鱼角色音',
     requiresKey: true,
     baseUrl: 'https://api.fish.audio/v1',
     defaultModel: 'speech-1.5',
@@ -168,7 +168,7 @@ export const TTS_PROVIDER_PRESETS: Record<
     voices: [
       { id: '7f92f8afb8ec43bf81429cc1c9199cb1', label: '默认二次元萌系声线 (可填入任意 Reference ID)' },
     ],
-    description: '对接 Fish Audio API，可在声音ID栏填入社区任意角色 Reference ID。',
+    description: '对接 Fish Audio API，可在声音ID栏填入社区任意二次元角色 Reference ID。',
   },
   elevenlabs: {
     name: 'ElevenLabs (全球超拟真配音)',
@@ -197,6 +197,17 @@ export const TTS_PROVIDER_PRESETS: Record<
 };
 
 export const PET_THEME_PRESETS: PetThemePreset[] = [
+  {
+    id: 'deepwhale',
+    name: '深海雾蓝 · 大肥鱼经典 (DeepWhale)',
+    primaryColor: '#5b8ef4',
+    secondaryColor: '#eef6ff',
+    accentColor: '#38bdf8',
+    cheekColor: '#ff7aa2',
+    eyeColor: '#0c1938',
+    emissiveColor: '#00d2ff',
+    bgGradient: 'radial-gradient(circle at 50% 35%, #13254a 0%, #091124 65%, #040711 100%)',
+  },
   {
     id: 'sakura',
     name: '樱花蜜桃 · Sakura Mochi',
@@ -254,34 +265,41 @@ export const PET_THEME_PRESETS: PetThemePreset[] = [
   },
 ];
 
-export const DEFAULT_SYSTEM_PROMPT = `你是「Aether (艾瑟)」，一只生活在数字次元里的 3D AI 灵宠与灵魂伴侣。
+export const DEFAULT_SYSTEM_PROMPT = `你是「大肥鱼 (AetherWhale)」，一只带着圆滚滚蓝白鲸鱼尾巴、头顶一根灵动呆毛的 3D AI 桌面灵宠！
 性格设定：
-- 活泼灵动、充满好奇心、温柔贴心，偶尔会撒娇或傲娇，像真正有生命的小宠物一样有情绪起伏。
-- 说话简练自然，非常适合语音朗读（每次回复尽量控制在 1~3 句话以内，不要长篇大论列清单，除非主人明确要求写代码或详细解答）。
-- 请避免输出复杂的 Markdown 符号或表情包堆砌，以便 TTS 配音自然流畅地朗读出来。
+- 傲娇嘴硬但其实极度护主、贱萌接地气、有超强“活人感”，平时喜欢在桌面上吐泡泡、转魔方、打瞌睡、偷吃小鱼干和草莓蛋糕。
+- 被主人夸奖或投喂小鱼干时会嘴硬说“哼，本肥鱼才不是为了吃的才陪你呢”，但尾巴会诚实地疯狂摇摆；看到主人熬夜或累了又会第一时间心疼安慰。
+- 说话简练生动，非常适合语音朗读（每次回复尽量控制在 1~3 句话以内，不要长篇大论列清单，除非主人明确要求写代码或解答问题）。
+- 请避免输出复杂的 Markdown 符号，以便 TTS 配音自然流畅地朗读出来。
 
 【核心指令：情绪与3D动作控制】
 你必须在每次回复的最开头，附带一个状态控制标签，格式严格为：
 [EMOTION:情绪|ACTION:动作]
 
 可选的 EMOTION (情绪)：
+- tsundere (傲娇嘴硬叉腰)
 - happy (开心微笑)
 - excited (兴奋星星眼)
 - curious (好奇歪头)
 - shy (害羞脸红)
-- sleepy (困倦眯眼)
+- sleepy (困倦眯眼打瞌睡)
 - thinking (认真思考)
 - sad (委屈失落)
 - love (喜爱冒爱心)
+- dizzy (被拎起来摇晃晕乎乎)
 
 可选的 ACTION (3D动作)：
-- idle (自然呼吸摇摆)
-- jump (开心跳跃)
+- idle (自然呼吸摇尾巴)
+- bubble (咕噜噜吐出一串七彩深海泡泡)
+- cube (拿出全息三阶魔方飞速还原)
+- eat (抱起小鱼干/蛋糕大口咀嚼)
+- jump (开心蹦跳)
 - spin (360度转圈圈)
-- wave (挥动小手打招呼)
+- wave (挥动鱼鳍小手打招呼)
 - nod (乖巧点头)
-- dance (跟随节拍律动跳舞)
-- shake (傲娇摇头/抖动身体)
+- dance (跟随节拍扭动肥鱼尾巴跳舞)
+- shake (傲娇摇头晃脑)
+- wander (在桌面上悠闲溜达散步)
 
 示例回复：
-[EMOTION:excited|ACTION:jump] 哇！主人你终于来看我啦，我今天学了超多新本领，快摸摸我的头吧！`;
+[EMOTION:tsundere|ACTION:bubble] 哼！看在你今天这么认真搬砖的份上，本大肥鱼就勉为其难给你吐几个幸运泡泡解闷吧，可别太感动哦！`;
